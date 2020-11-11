@@ -80,7 +80,29 @@ core
 └── manage.py
 ```
 
-# Database settings
+## pip freeze
+
+Now that all your libraries are installed, use the following command to create a record of the installed libraries within the project directory
+
+```
+(venv)$ pip3 freeze > requirements.txt
+For install
+(venv)$ pip3 install -r requirements.txt
+```
+
+
+Launch the development server:
+
+```
+(venv)$ python manage.py runserver
+```
+
+
+
+## settings.py setup for Database, static, template, Login and Logout url
+
+
+### Database settings
 Default django setup SQLite
 
 ```
@@ -97,7 +119,7 @@ DATABASES = {
 ```
 If setup others database Example MySQL, PostgreSQL need to change Database.
 
-## For PostgreSQL
+### For PostgreSQL
 First your OS instll PostgresSQL then setup project
 
 ```
@@ -116,12 +138,50 @@ DATABASES = {
 
 ```
 
-Launch the development server:
+### Static and template settings
 
 ```
-(venv)$ python manage.py runserver
-```
 
+......
+import os
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# local folder
+
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')  # For template
+STATIC_DIR = os.path.join(BASE_DIR, 'static')       # For static 
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')         # For media 
+
+
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [ TEMPLATE_DIR, ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For admin static file
+
+# For media file
+MEDIA_URL = '/media/'
+MEDIA_ROOT = MEDIA_DIR
+
+```
 
 
 
