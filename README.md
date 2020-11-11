@@ -78,6 +78,59 @@ core
 │   ├── urls.py
 │   └── wsgi.py
 └── manage.py
+```
 
+# Database settings
+Default django setup SQLite
 
 ```
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+```
+If setup others database Example MySQL, PostgreSQL need to change Database.
+
+## For PostgreSQL
+First your OS instll PostgresSQL then setup project
+
+```
+(venv)$  pip3 install django psycopg2     #Install package
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',      # database name
+        'USER': 'myprojectuser',  # database user name
+        'PASSWORD': 'password',   # password
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+```
+
+Launch the development server:
+
+```
+(venv)$ python manage.py runserver
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
