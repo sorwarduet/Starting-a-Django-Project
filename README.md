@@ -204,9 +204,43 @@ urlpatterns = [
 
 
 
+# backup project database 
 
+## Installation 
 
+```
+(venv)$ pip install django-dbbackup
 
+```
+
+## Add it in your project
+
+In your settings.py, make sure you have the following things:
+
+```
+INSTALLED_APPS = (
+    ...
+    'dbbackup',  # django-dbbackup
+)
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': os.path.join(BASE_DIR, 'backup')}
+
+```
+
+## Testing that everything worked
+Now, you should be able to create your first backup by running:
+```
+ (venv)$ python manage.py dbbackup
+```
+
+## Restore a database. ::
+
+```
+ (venv)$ python manage.py dbrestore
+```
+
+https://django-dbbackup.readthedocs.io/en/master/commands.html
 
 
 
