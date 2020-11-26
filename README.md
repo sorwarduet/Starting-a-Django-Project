@@ -50,6 +50,7 @@ Set up your development structure:
 ```
 $ mkdir django_project      # here create folder the 
 $ python3 -m virtualenv yourenv  # For create virtualenv
+$ virtualenv venv --python=python3.7
 $ cd django_project
 $ virtualenv venv           # here create virtualenv name is venv
 $ source venv/bin/activate  # Active the virtualenv
