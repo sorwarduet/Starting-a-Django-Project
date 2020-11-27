@@ -123,9 +123,17 @@ If setup others database Example MySQL, PostgreSQL need to change Database.
 
 ### For PostgreSQL
 First your OS instll PostgresSQL then setup project
+if any version error local this commat use
 
 ```
-(venv)$  pip3 install django psycopg2     #Install package
+$ sudo apt-get update
+$ sudo apt-get install -y python3.5-dev
+$ sudo apt-get install -y libpq-dev
+```
+
+
+```
+(venv)$  pip3 install  psycopg2     #Install package
 
 DATABASES = {
     'default': {
