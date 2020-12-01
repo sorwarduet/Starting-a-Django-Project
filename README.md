@@ -61,7 +61,7 @@ $ pip install "cookiecutter>=1.7.0"
 4. Now run it against this repo:
 
 ```
-(venv)$ cookiecutter https://github.com/pydanny/cookiecutter-django
+(venv)$ cookiecutter https://github.com/pydanny/cookiecutter-django.git
 ```
 Answer the prompts with your own desired options. For example:
 
