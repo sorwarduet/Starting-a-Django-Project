@@ -1,0 +1,16 @@
+What is Maven:
+  -> Dynamically add dependencies
+  -> Continuous integration, builds, testing
+  -> Automate the build process
+  
+ Buid automation Tools
+  -> Maven
+      >Java, c#, Ruby, scala
+  -> Ant
+      Java
+  -> Gradle
+      Java
+  -> NANT
+      > .Net
+  -> Pybuilder
+      > python
