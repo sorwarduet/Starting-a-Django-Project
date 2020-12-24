@@ -1,0 +1,30 @@
+($) git init # First commands in git
+($) git add . or name file # all file add or one file add
+($) git ls-files
+($) git rm name file # delete file in git
+($) git rm --cached file.txt  # rmove git not delete local
+($) git config --global user.email 'email address'
+($) git config --global user.name 'name user'
+($) git log # for git commit log show 
+($) git commit -m "message here"
+($) git log --oneline # show one line all commit message
+($) git show 66e576e  # Only show this commit code 
+($) git diff # show diffrence code
+($) git diff --staged  # when delete code need check which code delete or change that time use this commeent
+
+($) git diff 6645f 435fsk # this is for check two commit diffrence 
+($) git checkout 6645f file name # got privious version this commit
+($) git clone 'address' # same github project name
+($) git clone 'address' myproject # this new name myproject
+($) git branch # for check branch name
+($) git branch dev # create new branch 
+($) git clone -b branch_name 'address' # git clone specific branch 
+($) git checkout dev # switch new banch
+
+
+($) git checkout -- filename # this commands change any thing remove this write this commands
+($) git reset filename  # This commant add this git need to remove that time use
+($) git reset HEAD~1 # git reset commit lavel 1 last commit that time commit new commit
+($) git reset --soft HEAD~1 # git reset commit lavel 1 last commit that time commit new commit
+($) git reset --soft 456dsrw
+($) git reset --hard HEAD~2 # this reset remove every where directory, unstage area, 
