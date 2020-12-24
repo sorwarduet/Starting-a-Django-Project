@@ -8,19 +8,27 @@
 ($) git log # for git commit log show 
 ($) git commit -m "message here"
 ($) git log --oneline # show one line all commit message
+$) git log --oneline branch_name # show one line only branch commit message
 ($) git show 66e576e  # Only show this commit code 
 ($) git diff # show diffrence code
 ($) git diff --staged  # when delete code need check which code delete or change that time use this commeent
 
+($) git push origin master
+($) git push origin --delete test or branch_name
 ($) git diff 6645f 435fsk # this is for check two commit diffrence 
 ($) git checkout 6645f file name # got privious version this commit
 ($) git clone 'address' # same github project name
 ($) git clone 'address' myproject # this new name myproject
+($) git pull origin master #
 ($) git branch # for check branch name
 ($) git branch dev # create new branch 
+($) git branch -d branch_nam # need merge bracnh delete 
+($) git branch -D branch_nam  # unmerge bracnh delete 
+($) git checkout -b test # create branch and switch 
 ($) git clone -b branch_name 'address' # git clone specific branch 
 ($) git checkout dev # switch new banch
 
+($) git fetch #git pull=fetch+merge and fetch=only commit message
 
 ($) git checkout -- filename # this commands change any thing remove this write this commands
 ($) git reset filename  # This commant add this git need to remove that time use
@@ -28,3 +36,28 @@
 ($) git reset --soft HEAD~1 # git reset commit lavel 1 last commit that time commit new commit
 ($) git reset --soft 456dsrw
 ($) git reset --hard HEAD~2 # this reset remove every where directory, unstage area, 
+
+($) git merge <source branch> <destination>
+($) git merge test # here only source branch name bz currenlty i use master branch
+
+
+($) git stash # Its work for temp un commit file 
+($) git stash list # show stash list 
+($) git show stash@{0} # change file
+($) git git stash pop stash@{0}  # back to stash file in directory 
+($) git stash   apply stash@{0}  # back to stash file in directory but not delete stash list
+($) git stash -p # Need partial file stash
+($) git stash clean # all stash delete
+($) git stash drop stash@{0}
+
+Remote Repo create branch:
+	-> new pull request
+	-> comprie two branch 
+	-> merge two branch 
+	
+
+
+
+
+
+
