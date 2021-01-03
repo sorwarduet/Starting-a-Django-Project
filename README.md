@@ -348,7 +348,7 @@ https://django-dbbackup.readthedocs.io/en/master/commands.html
 
 Backup
 ```
-python manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+python manage.py dumpdata --exclude auth.permission --exclude contenttypes --indent 2 > db.json
 
 ```
 
