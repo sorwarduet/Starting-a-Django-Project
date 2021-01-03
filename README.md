@@ -344,4 +344,19 @@ Now, you should be able to create your first backup by running:
 https://django-dbbackup.readthedocs.io/en/master/commands.html
 
 
+# Using dumpdata
+
+Backup
+```
+python manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+
+```
+
+
+Loaddata
+```
+python manage.py loaddata db.json
+
+```
+
 
