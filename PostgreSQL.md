@@ -43,4 +43,36 @@ User Related:
     set role __test__;: Change role for current session to __test__.
     grant __test2__ to __test1__;: Allow __test1__ to set its role as __test2__.
     \deu+: List all user mapping on server
+    
+    
+Service management commands:
+
+    sudo service postgresql stop
+    sudo service postgresql start
+    sudo service postgresql restart
+  
+ Database Manage:
+ 
+    CREATE DATABASE myappdb;
+   If already create user:
+   
+    CREATE DATABASE myappdb with OWNER dbuser
+    
+   If not create user need to create:
+
+    CREATE USER myappuser WITH PASSWORD 'a-nice-random-password';
+
+    ALTER ROLE myappuser SET client_encoding TO 'utf8';
+    ALTER ROLE myappuser SET default_transaction_isolation TO 'read committed';
+    ALTER ROLE myappuser SET timezone TO 'UTC';
+
+    GRANT ALL PRIVILEGES ON DATABASE myappdb TO myappuser ;
+    
+   Drop Database:
+   
+      DROP DATABASE [IF EXISTS] db_name;
+    
+    
+    
+  
 
