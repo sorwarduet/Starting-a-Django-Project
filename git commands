@@ -25,6 +25,7 @@ $) git log --oneline branch_name # show one line only branch commit message
 ($) git branch -d branch_nam # need merge bracnh delete 
 ($) git branch -D branch_nam  # unmerge bracnh delete 
 ($) git checkout -b test # create branch and switch 
+($) git push origin --delete dev_sorwar # dev_sorwar is branch name
 ($) git clone -b branch_name 'address' # git clone specific branch 
 ($) git checkout dev # switch new banch
 
