@@ -1,0 +1,12 @@
+## Step 1:
+https://realpython.com/asynchronous-tasks-with-django-and-celery/
+https://docs.celeryproject.org/en/3.1/django/first-steps-with-django.html
+or Books Ref
+Installing Celery
+```
+pip install celery==4.4.2 or 4.0 # for above 3 need 4.** 
+
+```
+Installing RabbitMQ
+Read......
+https://www.rabbitmq.com/install-debian.html#apt
