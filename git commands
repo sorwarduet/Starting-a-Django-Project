@@ -33,6 +33,10 @@ $) git log --oneline branch_name # show one line only branch commit message
 
 ($) git checkout -- filename # this commands change any thing remove this write this commands
 ($) git reset filename  # This commant add this git need to remove that time use
+
+
+
+
 ($) git reset HEAD~1 # git reset commit lavel 1 last commit that time commit new commit
 ($) git reset --soft HEAD~1 # git reset commit lavel 1 last commit that time commit new commit
 ($) git reset --soft 456dsrw
@@ -59,6 +63,31 @@ Remote Repo create branch:
 
 
 
+## Git global setup
+git config --global user.name "Md. Sorwar Alam"
+git config --global user.email "esorwar.cse@gmail.com"
 
+## Create a new repository
+git clone https://gitlab.com/sorwarduet/duet-support-service-management.git
+cd duet-support-service-management
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+## Push an existing folder
+cd existing_folder
+git init
+git remote add origin https://gitlab.com/sorwarduet/duet-support-service-management.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+## Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://gitlab.com/sorwarduet/duet-support-service-management.git
+git push -u origin --all
+git push -u origin --tags
 
 
