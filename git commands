@@ -1,5 +1,6 @@
 ($) git init # First commands in git
 ($) git add . or name file # all file add or one file add
+($)  git add -p # git add with see which line change
 ($) git ls-files
 ($) git rm name file # delete file in git
 ($) git rm --cached file.txt  # rmove git not delete local
@@ -7,8 +8,13 @@
 ($) git config --global user.name 'name user'
 ($) git log # for git commit log show 
 ($) git commit -m "message here"
+($) git commit -a -m "Meessage here" #This without modifiy fill commit
+($) git commit --amend #is used to make changes to commits after-the-fact, which can be useful for making notes about a given commit.
+($) git revert makes a new commit which effectively rolls back a previous commit. It’s a bit like an undo command.
 ($) git log --oneline # show one line all commit message
-$) git log --oneline branch_name # show one line only branch commit message
+($) git log --oneline branch_name # show one line only branch commit message
+($) git log -p	Produces patch text
+($) git log --stat # show how many line add or delete
 ($) git show 66e576e  # Only show this commit code 
 ($) git diff # show diffrence code
 ($) git diff --staged  # when delete code need check which code delete or change that time use this commeent
