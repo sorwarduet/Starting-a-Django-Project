@@ -359,4 +359,6 @@ python manage.py loaddata db.json
 
 ```
 
+https://www.unixmen.com/configure-postgresql-django-application-centos-7/
+
 
